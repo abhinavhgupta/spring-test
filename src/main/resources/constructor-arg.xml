@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+<!-- Use cases for constructor-injection using  constructor-arg -->
+
+<!-- we use "type" if we pass 2 argument of different type & in different order, as used in constructor  -->
+
+	<bean id="triangle" class="spring.demo.injection.Triangle">
+		<constructor-arg type="int" value="28"></constructor-arg>
+		<constructor-arg type="String" value="Equilateral"></constructor-arg>
+	</bean>
+	
+<!-- we pass "index" if we pass 2 argument of "same type" & in different order, as used in constructor-->
+	
+<!-- 	<bean id="triangle" class="spring.demo.injection.Triangle"> -->
+
+<!-- 		<constructor-arg index="1" value="28"></constructor-arg> -->
+<!-- 		<constructor-arg index="0" value="Equilateral"></constructor-arg> -->
+<!-- 	</bean> -->
+	
+<!-- we pass "name" if we pass 2 argument of "same type" & in different order, as used in constructor -->
+	
+<!-- 	<bean id="triangle" class="spring.demo.injection.Triangle"> -->
+
+<!-- 		<constructor-arg name="height" value="28"></constructor-arg> -->
+<!-- 		<constructor-arg name="type" value="Equilateral"></constructor-arg> -->
+<!-- 	</bean> -->
+	
+	
+</beans>
